@@ -1,6 +1,8 @@
 # Engineering-Solver
 # Main Program
 
+from physics.newton import calculate_force
+
 print("========================================")
 print("          ENGINEERING SOLVER")
 print("========================================")
@@ -28,13 +30,14 @@ if choice == "1":
         mass = float(input("Enter mass (kg): "))
         acceleration = float(input("Enter acceleration (m/s^2): "))
 
-        force = mass * acceleration
+        force = calculate_force(mass, acceleration)
 
         print()
         print("Calculation:")
         print("F = m × a")
         print(f"F = {mass} × {acceleration}")
         print(f"F = {force} N")
+
         print()
         print(f"Answer: F = {force} N")
 
